@@ -29,7 +29,7 @@ vector<int> removeDuplicates_optimal(vector<int> &arr, int n)
 
     int i = 0; // Pointer for the position of unique elements
 
-    for (int j = 1; j < n; j++)
+    for (int j = 1; j < n; j++) // this loops is used to skip the index of duplicate elements
     {
         if (arr[j] != arr[i]) // If the current element is unique
         {

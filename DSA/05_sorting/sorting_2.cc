@@ -58,6 +58,14 @@ void mergeSort(vector<int> &arr, int low, int high)
 
 void quickSort(vector<int> &arr, int low, int high)
 {
+    // Select pivot element generally at index 1
+    // place the pivot element at such a index so that there is much space to place all the smaller element on left and larger element on right
+    // repeat this process for left side
+    // repeat it for right side
+    // recursive calls = O(logn)
+    // as every recursive call consist for loop for placing smaller and large number at respective position = O(n)
+    // total time complexity = O(nlogn)
+    // space complexity = O(n)
     if (low >= high)
     {
         return;
@@ -117,13 +125,13 @@ int main()
             arr.push_back(temp);
         }
 
-
         quickSort(arr, 0, n - 1);
 
-        for(int it: arr){
-            cout<<it<<" ";
+        for (int it : arr)
+        {
+            cout << it << " ";
         }
-        cout<<"\n";
+        cout << "\n";
     }
 }
 
